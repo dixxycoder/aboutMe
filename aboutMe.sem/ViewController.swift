@@ -47,6 +47,9 @@ class ViewController: UIViewController
     // Lable
     @IBOutlet weak var meLable: UILabel!
     
+    // Discribing lable
+    @IBOutlet weak var disLable: UILabel!
+    
     // Button "tap me"
     @IBOutlet weak var changeButton: UIButton!
     
@@ -60,7 +63,19 @@ class ViewController: UIViewController
         super.viewDidLoad()
     }
 
-    // Change background and lable
+    @IBAction func mainButton(_ sender: Any)
+    {
+        meLable.text = "Hobby"
+        disLable.text = " My hobby are solving puzziles, playing games, "
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     @IBAction func changeColorb(_ sender: Any)
     {
         self.view.backgroundColor = UIColor.blue
