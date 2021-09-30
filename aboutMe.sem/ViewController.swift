@@ -56,17 +56,24 @@ class ViewController: UIViewController
     // Button "color"
     @IBOutlet weak var colorButton: UIButton!
     
-
+    @IBOutlet weak var aboutImage: UIImageView!
+    
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
     }
 
+//MARK: HOBBYS (first tap)
     @IBAction func mainButton(_ sender: Any)
     {
+        self.view.backgroundColor = UIColor.white
+        
         meLable.text = "Hobby"
-        disLable.text = " My hobby are solving puzziles, playing games, "
+        disLable.text = " My hobby are solving puzziles, playing games, tools. as an exaple is what kind of tools would you nedd to fix your car."
+
+        aboutImage.image = UIImage(named: "Rubixs cube")
+        
     }
     
     
@@ -84,3 +91,22 @@ class ViewController: UIViewController
     
 }
 
+
+
+
+
+
+
+
+
+
+//MARK: for the images
+//    if
+//    disappearingImageView.image == UIImage(named: "Binary")
+//    {
+//        disappearingImageView.image = UIImage(named: "blackHole")
+//    }
+//    else
+//    {
+//        disappearingImageView.image = UIImage(named: "Binary")
+//    }
