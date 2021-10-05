@@ -44,69 +44,85 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    // Lable
+
+// Lable
     @IBOutlet weak var meLable: UILabel!
     
-    // Discribing lable
+// Discribing lable (under the lables that says About me)
     @IBOutlet weak var disLable: UILabel!
     
-    // Button "tap me"
-    @IBOutlet weak var changeButton: UIButton!
+// Segment Controler (discribing about me).
+    @IBOutlet weak var sigOutlet: UISegmentedControl!
     
-    // Button "color"
+// Button (personal color)
     @IBOutlet weak var colorButton: UIButton!
     
+// To show the Images
     @IBOutlet weak var aboutImage: UIImageView!
     
-
+    var greeting : String = ""
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        disLable.text = " "
     }
 
-//MARK: HOBBYS (first tap)
-    @IBAction func mainButton(_ sender: Any)
+//MARK: SEGMENT
+    @IBAction func sigAction(_ sender: Any)
     {
-        self.view.backgroundColor = UIColor.white
-        
-        meLable.text = "Hobby"
-        disLable.text = " My hobby are solving puzziles, playing games, tools. as an exaple is what kind of tools would you nedd to fix your car."
+        switch
+            sigOutlet
+                .selectedSegmentIndex
+           {
 
-        aboutImage.image = UIImage(named: "Rubixs cube")
+// Hobbys
+           case 0:
+            meLable.text = "Hobby"
+               greeting = "My hobby are solving puzziles, playing games, tools. as an exaple is what kind of tools would you nedd to fix your car."
+            
+            disLable.text = greeting
+            
+            self.view.backgroundColor = UIColor.white
+            
+            aboutImage.image = UIImage(named: "Rubixs cube")
+            
+           //
+           case 1:
+            meLable.text = ""
+               greeting = "Hola"
+            disLable.text = greeting
+               
+           //
+//           case 2:
+//               greeting = "Bonjour"
+//            disLable.text = greeting
+           default:
+               break
+           }
+           
+
+    
+//MARK: for the images
+    
         
-    }
+        
+        
+        //    if
+        //        disappearingImageView.image = UIImage(named: "blackHole")
+        //    }
+        //    else
+        //    {
+        //        disappearingImageView.image = UIImage(named: "Binary")
+        //    }
     
-    
-    
-    
-    
-    
-    
-    
-    @IBAction func changeColorb(_ sender: Any)
+        func colorButton(_ sender: Any)
     {
-        self.view.backgroundColor = UIColor.blue
-         meLable.text = "I'm Blue?"
+    self.view.backgroundColor = UIColor.blue
+    meLable.text = "I'm Blue?"
+    disLable.text = "_____"
     }
-    
 }
 
-
-
-
-
-
-
-
-
-
-//MARK: for the images
-//    if
-//    disappearingImageView.image == UIImage(named: "Binary")
-//    {
-//        disappearingImageView.image = UIImage(named: "blackHole")
-//    }
-//    else
-//    {
-//        disappearingImageView.image = UIImage(named: "Binary")
-//    }
+}
