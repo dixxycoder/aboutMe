@@ -65,8 +65,10 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        disLable.text = " "
+    
+// When you open the app and the segment (about me) are the same.
+        disLable.text = "Hi there. I'm Grant Spraker. I go to Fort Collins High School and a Peer Counsler for my school as well."
+        aboutImage.image = UIImage(named: "oldFCHS")
     }
 
 // MARK: SEGMENT
@@ -76,33 +78,31 @@ class ViewController: UIViewController
             sigOutlet
                 .selectedSegmentIndex
            {
+// MARK: About Me
+        case 0:
+            meLable.text = "About Me"
+                greeting = "Hi there. I'm Grant Spraker. I go to Fort Collins High School and a Peer Counsler for my school as well."
+                disLable.text = greeting
+            aboutImage.image = UIImage(named: "oldFCHS")
+            self.view.backgroundColor = UIColor.lightGray
 
 // MARK: Hobbys
-           case 0:
+        case 1:
             meLable.text = "Hobby"
                greeting = "My hobby are solving puzziles, playing games, tools. as an exaple is what kind of tools would you nedd to fix your car."
-            
             disLable.text = greeting
-            
-            self.view.backgroundColor = UIColor.white
-            
-            aboutImage.image = UIImage(named: "Rubixs cube")
-            
-// MARK: 1
-           case 1:
-            meLable.text = ""
-               greeting = "Hola"
-            disLable.text = greeting
+        self.view.backgroundColor = UIColor.white
+        aboutImage.image = UIImage(named: "Rubixs cube")
                
-// MARK: 2
+// MARK: Values
            case 2:
-               greeting = "Bonjour"
+            meLable.text = "Values"
+            
+               greeting = "_________"
             disLable.text = greeting
             
-// MARK: 3
-            case 3:
-                greeting = "HI"
-            disLable.text = greeting
+            aboutImage.image = UIImage(named: "badBad")
+            
            default:
                break
            }

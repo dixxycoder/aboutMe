@@ -57,10 +57,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.95107210919999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
-                                    <segment title="Hobbies"/>
-                                    <segment title="Second"/>
-                                    <segment title=""/>
-                                    <segment title=""/>
+                                    <segment title="About Me"/>
+                                    <segment title="hobbies"/>
+                                    <segment title="Values"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.10595903545618057" green="0.99996453523635864" blue="0.0027232379652559757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -69,14 +68,13 @@
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="aboutImage" destination="Ddb-fB-cI8" id="YSG-jk-ewQ"/>
                         <outlet property="colorButton" destination="W8P-k2-Rfl" id="Weg-u3-Oqg"/>
                         <outlet property="disLable" destination="LQ0-Kk-gQM" id="I0J-Rv-drL"/>
                         <outlet property="meLable" destination="3gU-x2-D7c" id="o9J-F5-ybM"/>
-                        <outlet property="personcolorButton" destination="8bC-Xf-vdC" id="T5M-Bq-zr2"/>
                         <outlet property="sigOutlet" destination="SQn-mO-R51" id="C5H-Zt-2eC"/>
                     </connections>
                 </viewController>
