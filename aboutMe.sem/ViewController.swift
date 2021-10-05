@@ -1,9 +1,9 @@
-//
-//  ViewController.swift
-//  aboutMe.sem
-//
-//  Created by Grant Spraker on 9/24/21.
-//
+/*
+  ViewController.swift
+  aboutMe.sem
+
+  Created by Grant Spraker on 9/24/21.
+*/
 
 import UIKit
 
@@ -69,7 +69,7 @@ class ViewController: UIViewController
         disLable.text = " "
     }
 
-//MARK: SEGMENT
+// MARK: SEGMENT
     @IBAction func sigAction(_ sender: Any)
     {
         switch
@@ -77,7 +77,7 @@ class ViewController: UIViewController
                 .selectedSegmentIndex
            {
 
-// Hobbys
+// MARK: Hobbys
            case 0:
             meLable.text = "Hobby"
                greeting = "My hobby are solving puzziles, playing games, tools. as an exaple is what kind of tools would you nedd to fix your car."
@@ -88,41 +88,32 @@ class ViewController: UIViewController
             
             aboutImage.image = UIImage(named: "Rubixs cube")
             
-           //
+// MARK: 1
            case 1:
             meLable.text = ""
                greeting = "Hola"
             disLable.text = greeting
                
-           //
-//           case 2:
-//               greeting = "Bonjour"
-//            disLable.text = greeting
+// MARK: 2
+           case 2:
+               greeting = "Bonjour"
+            disLable.text = greeting
+            
+// MARK: 3
+            case 3:
+                greeting = "HI"
+            disLable.text = greeting
            default:
                break
            }
-           
-
-    
-//MARK: for the images
-    
-        
-        
-        
-        //    if
-        //        disappearingImageView.image = UIImage(named: "blackHole")
-        //    }
-        //    else
-        //    {
-        //        disappearingImageView.image = UIImage(named: "Binary")
-        //    }
-    
-        func colorButton(_ sender: Any)
-    {
-    self.view.backgroundColor = UIColor.blue
-    meLable.text = "I'm Blue?"
-    disLable.text = "_____"
     }
-}
+
+// MARK: Personalty color button
+    @IBAction func buttonColor(_ sender: Any)
+    {
+        self.view.backgroundColor = UIColor.blue
+        meLable.text = "I'm Blue?"
+        disLable.text = "_____"
+    }
 
 }
