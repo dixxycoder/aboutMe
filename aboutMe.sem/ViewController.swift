@@ -9,32 +9,42 @@ import UIKit
 
 // Button Corner Radius and Border code from StackOverflow.com
 
-@IBDesignable extension UIButton {
+@IBDesignable extension UIButton
+{
 
-    @IBInspectable var borderWidth: CGFloat {
-        set {
+    @IBInspectable var borderWidth: CGFloat
+    {
+        set
+        {
             layer.borderWidth = newValue
         }
-        get {
+        get
+        {
             return layer.borderWidth
         }
     }
 
-    @IBInspectable var cornerRadius: CGFloat {
-        set {
+    @IBInspectable var cornerRadius: CGFloat
+    {
+        set
+        {
             layer.cornerRadius = newValue
         }
-        get {
+        get
+        {
             return layer.cornerRadius
         }
     }
 
-    @IBInspectable var borderColor: UIColor? {
-        set {
+    @IBInspectable var borderColor: UIColor?
+    {
+        set
+        {
             guard let uiColor = newValue else { return }
             layer.borderColor = uiColor.cgColor
         }
-        get {
+        get
+        {
             guard let color = layer.borderColor else { return nil }
             return UIColor(cgColor: color)
         }
@@ -68,6 +78,7 @@ class ViewController: UIViewController
     
 // When you open the app and the segment (about me) are the same.
         disLable.text = "Hi there. I'm Grant Spraker. I go to Fort Collins High School and a Peer Counsler for my school as well."
+        
         aboutImage.image = UIImage(named: "oldFCHS")
     }
 
@@ -81,24 +92,33 @@ class ViewController: UIViewController
 // MARK: About Me
         case 0:
             meLable.text = "About Me"
+            
                 greeting = "Hi there. I'm Grant Spraker. I go to Fort Collins High School and a Peer Counsler for my school as well."
+            
                 disLable.text = greeting
+            
             aboutImage.image = UIImage(named: "oldFCHS")
+            
             self.view.backgroundColor = UIColor.lightGray
 
 // MARK: Hobbys
         case 1:
             meLable.text = "Hobby"
-               greeting = "My hobby are solving puzziles, playing games, tools. as an exaple is what kind of tools would you nedd to fix your car."
+            
+            greeting = "My hobby are solving puzziles, playing games, tools. as an exaple is tools that you would need to fix your car."
+            
             disLable.text = greeting
+            
         self.view.backgroundColor = UIColor.white
+            
         aboutImage.image = UIImage(named: "Rubixs cube")
                
 // MARK: Values
-           case 2:
+        case 2:
             meLable.text = "Values"
             
-               greeting = "_________"
+            greeting = "My Values are helping people, being kind, caring, and family"
+            
             disLable.text = greeting
             
             aboutImage.image = UIImage(named: "badBad")
@@ -112,8 +132,12 @@ class ViewController: UIViewController
     @IBAction func buttonColor(_ sender: Any)
     {
         self.view.backgroundColor = UIColor.blue
+        
         meLable.text = "I'm Blue?"
-        disLable.text = "_____"
+        
+        disLable.text = "people with a blue personality like working in group projects, some of there the values are friendships, honsety, compassion, ect."
+        
+        aboutImage.image = UIImage(named: "goodQuote")
     }
 
 }
