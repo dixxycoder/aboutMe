@@ -105,7 +105,7 @@ class ViewController: UIViewController
         case 1:
             meLable.text = "Hobby"
             
-            greeting = "My hobby are solving puzziles, playing games, tools. as an exaple is tools that you would need to fix your car."
+            greeting = "My hobby are solving puzzles, playing games, tools. As an exaple is tools that you would need to fix your car."
             
             disLable.text = greeting
             
@@ -117,9 +117,11 @@ class ViewController: UIViewController
         case 2:
             meLable.text = "Values"
             
-            greeting = "My Values are helping people, being kind, caring, and family"
+            greeting = "My Values are helping people, being kind, caring, and family."
             
             disLable.text = greeting
+            
+            self.view.backgroundColor = UIColor.green
             
             aboutImage.image = UIImage(named: "badBad")
             
