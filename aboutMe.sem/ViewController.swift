@@ -105,7 +105,7 @@ class ViewController: UIViewController
         case 1:
             meLable.text = "Hobby"
             
-            greeting = "My hobby are solving puzzles, playing games, tools. As an exaple is tools that you would need to fix your car."
+            greeting = "My hobby are solving puzzles, playing games, tools. As an example is tools that you would need to fix your car."
             
             disLable.text = greeting
             
